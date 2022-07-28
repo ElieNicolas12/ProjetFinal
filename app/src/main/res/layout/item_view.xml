@@ -25,14 +25,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/itemDateTV"
                 android:layout_margin="8dp"
-                android:textSize="28dp"
+                android:textSize="20dp"
                 tools:text = "Date"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/itemCommentTV"
                 android:layout_margin="8dp"
-                android:textSize="28dp"
+                android:textSize="15dp"
                 tools:text = "Date"/>
         </LinearLayout>
     </LinearLayout>

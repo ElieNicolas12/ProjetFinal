@@ -124,7 +124,17 @@ internal class MyBroadCastReceiver(val frag:HomeFragment) : BroadcastReceiver() 
         frag.updated_at.text=currentDate
         frag.status.text= TempStore.TempData_Current!!.weather!![0].description
         frag.temp.text=TempStore.TempData_Current!!.main!!.temp.toString()+"°C"
-//        Log.d("ok",sdf.format(frag.id ))
+        frag.temp_max.text="Min: "+TempStore.TempData_Current!!.main!!.temp_max.toString()+"°C"
+        frag.temp_min.text="Min: "+TempStore.TempData_Current!!.main!!.temp_min.toString()+"°C"
+        val simpleSunrise_Sunset = SimpleDateFormat("hh:mm")
+        frag.sunrise.text=simpleSunrise_Sunset.format(TempStore.TempData_Current!!.sys!!.sunrise)
+        frag.sunset.text=simpleSunrise_Sunset.format(TempStore.TempData_Current!!.sys!!.sunset)
+        frag.wind.text=TempStore.TempData_Current!!.wind!!.speed.toString()
+        frag.pressure.text=TempStore.TempData_Current!!.main!!.pressure.toString()+" hPa"
+        frag.humidity.text=TempStore.TempData_Current!!.main!!.humidity.toString()+" %"
+        frag.about.text="E/R"
+
+
     }
 }
 internal class MyBroadCastReceiver2(val frag:HomeFragment) : BroadcastReceiver() {

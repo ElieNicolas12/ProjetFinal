@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
+import android.util.Log
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -25,8 +26,7 @@ class MyFirebaseMessagingService() : FirebaseMessagingService() {
     {
         val intent= Intent(this,MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        val pendingIntent=PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_ONE_SHOT)
-
+        val pendingIntent=PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_MUTABLE)
         var builder:NotificationCompat.Builder=NotificationCompat.Builder(applicationContext,
             channelID)
             .setSmallIcon(R.drawable.sunrise)
@@ -45,6 +45,7 @@ class MyFirebaseMessagingService() : FirebaseMessagingService() {
             notificationManager.createNotificationChannel(notificationChannel)
         }
         notificationManager.notify(0,builder.build())
+        Log.d("PushNotification","Done")
 
     }
 

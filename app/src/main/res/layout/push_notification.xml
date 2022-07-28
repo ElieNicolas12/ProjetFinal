@@ -10,8 +10,8 @@
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/sunrise" />
@@ -24,7 +24,7 @@
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/app_logo"
             android:text="Title"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -35,8 +35,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/app_logo"
+            android:layout_marginBottom="2dp"
             android:text="Description..."
-            android:textSize="20sp" />
+            android:textSize="15sp" />
     </RelativeLayout>
 
 

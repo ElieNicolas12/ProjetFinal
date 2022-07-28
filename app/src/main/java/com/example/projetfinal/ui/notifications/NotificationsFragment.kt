@@ -60,14 +60,14 @@ class NotificationsFragment : Fragment() {
         })
         lv_listView.onItemClickListener=AdapterView.OnItemClickListener { parent, view, position, id ->
             Toast.makeText(this.context,parent?.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show()
-//            TempStore.Case=1
-//            LatLong.city=(parent?.getItemAtPosition(position).toString())
-//            val transaction = fragmentManager?.beginTransaction()
-//            transaction?.replace(R.id.nav_host_fragment_activity_main,HomeFragment())
-//            transaction?.setReorderingAllowed(true)
-//            transaction?.addToBackStack(null)
-//
-//            transaction?.commit()
+            TempStore.Case=1
+            LatLong.city=(parent?.getItemAtPosition(position).toString())
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_host_fragment_activity_main,HomeFragment())
+            transaction?.setReorderingAllowed(true)
+            transaction?.addToBackStack(null)
+
+            transaction?.commit()
 
 
 

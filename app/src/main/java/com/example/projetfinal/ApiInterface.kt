@@ -14,7 +14,6 @@ interface ApiInterface {
 
     @GET("?units=metric&appid=29f67eecb170dfbfbf6d2dc637ff448f")
     fun getDatabyCityName(@Query("q") city:String): Call<TempData>
-}
 
-//@GET("?q=beirut&units=metric&appid=29f67eecb170dfbfbf6d2dc637ff448f")
-//fun getData(): Call<TempData>
+
+}
